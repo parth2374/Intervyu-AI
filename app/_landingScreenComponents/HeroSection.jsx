@@ -19,7 +19,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="min-h-screen font-[LandingFont] flex flex-col items-center justify-center text-center bg-[url('/HeroImage.avif')] bg-center bg-cover relative overflow-hidden">
+    <div className="min-h-screen font-[LandingFont] flex flex-col items-center justify-center text-center bg-[url('/HeroImage.avif')] bg-center bg-cover relative overflow-hidden w-full!">
       <nav
         className={`fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-8 md:px-10 transition-all duration-300 ${
           isScrolled
@@ -39,7 +39,7 @@ export default function HeroSection() {
           />
         </div>
 
-        <div className="hidden md:flex gap-10 text-gray-700 font-medium">
+        <div className="hidden md:hidden lg:flex gap-10 text-gray-700 font-medium">
           <a href="/scheduled-interview" className="text-gray-600 hover:text-black transition">
             Scheduled Interviews
           </a>

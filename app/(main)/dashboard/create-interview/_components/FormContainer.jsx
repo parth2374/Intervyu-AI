@@ -14,7 +14,7 @@ import { InterviewType } from '@/services/Constants'
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
 
-const FormContainer = ({ onHandleInputChange, GoToNext }) => {
+const FormContainer = ({ onHandleInputChange, GoToNext, initialJobPosition, initialJobDescription }) => {
 
 	const [interviewType, setInterviewType] = useState([])
 
@@ -39,12 +39,12 @@ const FormContainer = ({ onHandleInputChange, GoToNext }) => {
 
 			<div>
 				<h2 className='text-sm font-medium'>Job Position</h2>
-				<Input placeholder='e.g. Full Stack Developer' className={`mt-2`} onChange={(event) => onHandleInputChange('jobPosition', event.target.value)} />
+				<Input placeholder='e.g. Full Stack Developer' className={`mt-2`} defaultValue={initialJobPosition} onChange={(event) => onHandleInputChange('jobPosition', event.target.value)} />
 			</div>
 
 			<div className='mt-5'>
 				<h2 className='text-sm font-medium'>Job Description</h2>
-				<Textarea placeholder='Enter detailed job description...' className={`mt-2 h-[100px]`} onChange={(event) => onHandleInputChange('jobDescription', event.target.value)} />
+				<Textarea placeholder='Enter detailed job description...' className={`mt-2 min-h-[100px]`} defaultValue={initialJobDescription} onChange={(event) => onHandleInputChange('jobDescription', event.target.value)} />
 			</div>
 
 			<div className='mt-5'>

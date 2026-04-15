@@ -4,12 +4,12 @@ import './LandingPageStyles.css'
 
 export default function PolicyEngineDiagram() {
   return (
-    <div className="min-h-screen mt-12 bg-[#f7f7f5] px-20 py-20 font-[LandingFont]">
+    <div className="min-h-screen mt-12 bg-[#f7f7f5] px-20 py-20 font-[LandingFont] w-full overflow-hidden">
       <div className="max-w-[67rem] mx-auto">
         {/* Header Section */}
         <div className="flex justify-between items-start mb-20">
           <div className="max-w-2xl">
-            <h1 className="text-5xl tracking-tighter mb-6">
+            <h1 className="text-5xl tracking-tighter mb-6 text-black">
               The infrastructure<br />behind every decision
             </h1>
             <p className="text-xl text-gray-500 tracking-tight">
@@ -25,7 +25,7 @@ export default function PolicyEngineDiagram() {
         </div>
 
         {/* Diagram Section */}
-        <div className="relative flex items-center justify-center min-h-[600px]">
+        <div className="relative flex items-center justify-center min-h-[600px] lg:scale-100 md:scale-90 scale-70">
           {/* Decide - Top */}
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
             <div className="bg-[#e8e8e7] px-12 py-4 rounded-full">

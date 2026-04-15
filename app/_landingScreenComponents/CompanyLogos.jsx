@@ -42,7 +42,7 @@ export default function CompanyLogos() {
           ))}
         </div>
 
-        <div className="mt-36 border-t border-gray-200 pt-12">
+        <div className="mt-36 border-t border-gray-200 pt-0 md:pt-12 lg:pt-12">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mt-24">
             <div>
               <h3 className="text-[2.75rem] text-gray-900">12.4x</h3>

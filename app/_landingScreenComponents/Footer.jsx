@@ -26,7 +26,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative -mt-[4rem] w-full min-h-[87vh] font-[LandingFont]">
+    <footer className="relative -mt-[1rem] md:-mt-[1rem] lg:-mt-[4rem] w-full min-h-[87vh] font-[LandingFont] z-5">
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center -z-10"
@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom row */}
-        <div className="absolute bottom-8 border-t border-white/10 pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-white/80">
+        <div className="absolute hidden bottom-8 border-t border-white/10 pt-6 md:flex lg:flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-white/80">
           <div className="text-gray-300">
             <span>© Intervyu 2025</span>
             <span className="mx-4">•</span>

@@ -34,7 +34,7 @@ export default function OnboardSection() {
   const [imageIndex, setImageIndex] = useState(1);
 
   return (
-    <div className="min-h-screen bg-white px-6 mt-12 py-20 font-[LandingFont]">
+    <div className="min-h-screen bg-white px-6 mt-12 py-20 font-[LandingFont] w-full overflow-hidden">
       <div className="max-w-[67rem] mx-auto">
         {/* Header */}
         <div className="flex justify-between items-start mb-16">
@@ -43,7 +43,7 @@ export default function OnboardSection() {
               <span className="text-sm font-medium text-gray-700">Onboard</span>
             </div>
             
-            <h1 className="text-5xl leading-14 tracking-tighter mb-6">
+            <h1 className="text-5xl leading-14 tracking-tighter mb-6 text-gray-700">
               Drive revenues with<br />Duna Onboard
             </h1>
             
@@ -53,8 +53,8 @@ export default function OnboardSection() {
           </div>
           
           <button className="flex items-center gap-2 px-6 py-3 border-2 border-gray-300 rounded-full hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300">
-            <span className="font-medium">Explore</span>
-            <ChevronRight className="w-5 h-5" />
+            <span className="font-medium text-gray-700">Explore</span>
+            <ChevronRight className="w-5 h-5 text-gray-700" />
           </button>
         </div>
 

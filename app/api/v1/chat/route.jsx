@@ -272,7 +272,8 @@ import { verifyApiKey } from "@/lib/apiKeys"; // adjust path if needed
 
 // Config
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
-const MODEL_NAME = "google/gemini-2.0-flash-exp:free";
+// const MODEL_NAME = "google/gemini-2.0-flash-exp:free";
+const MODEL_NAME = "google/gemma-4-26b-a4b-it:free";
 const TIMEOUT_MS = 12_000;
 const MAX_MESSAGE_LENGTH = 20_000;
 

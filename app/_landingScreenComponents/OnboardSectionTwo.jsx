@@ -34,7 +34,7 @@ export default function OnboardSectionTwo() {
   const [imageIndex, setImageIndex] = useState(1);
 
   return (
-    <div className="min-h-screen bg-white px-6 mt-[8rem] py-20 font-[LandingFont]">
+    <div className="min-h-screen bg-white px-6 mt-[8rem] py-20 font-[LandingFont] w-full overflow-hidden">
       <div className="max-w-[67rem] mx-auto">
         {/* Header */}
         <div className="flex justify-between items-start mb-16">
@@ -52,10 +52,11 @@ export default function OnboardSectionTwo() {
             </p>
           </div>
           
-          <button className="flex items-center gap-2 px-6 py-3 border-2 border-gray-300 rounded-full hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300">
-            <span className="font-medium">Explore</span>
+          {/* <button className="flex items-center gap-2 px-6 py-3 border-2 border-gray-300 rounded-full hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300">
+            <span className="font-medium text-gray-700">Explore</span>
             <ChevronRight className="w-5 h-5" />
-          </button>
+          </button> */}
+          <h1>hello</h1>
         </div>
 
         {/* Content Grid */}

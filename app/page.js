@@ -12,12 +12,12 @@ import OnboardSectionTwo from './_landingScreenComponents/OnboardSectionTwo'
 
 const Home = () => {
   return (
-    <div>
+    <div className='bg-white'>
       <HeroSection />
       <CompanyLogos />
       <FeaturesSection />
       <TestimonialsGrid />
-      <PolicyEngineDiagram />
+      {/* <PolicyEngineDiagram /> */}
       <OnboardSection />
       <OnboardSectionTwo />
       <OnboardSection />

@@ -49,7 +49,7 @@ export default function FeaturesSection() {
               {/* icon */}
               <div className="flex-shrink-0 mt-1">
                 <div className="flex items-center justify-center">
-                  <div>{f.icon}</div>
+                  <div className="text-black">{f.icon}</div>
                 </div>
               </div>
 

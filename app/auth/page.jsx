@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react'
 import { FcGoogle } from "react-icons/fc";
 import Authentication from '../_components/Authentication';
 import { useAuthContext } from '../provider';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { Loader } from 'lucide-react';
 
 const Login = () => {
@@ -14,12 +14,14 @@ const Login = () => {
 	const { user } = useAuthContext()
 	const router = useRouter()
 	const [loading, setLoading] = useState(false)
+	const searchParams = useSearchParams()
+	const redirectUrl = searchParams.get('redirect') || '/dashboard'
 
 	useEffect(() => {
 		if (user) {
-			router.push('/dashboard')
+			router.push(redirectUrl)
 		}
-	}, [user])
+	}, [user, redirectUrl])
 
 	return (
 		<div className='flex flex-col items-center justify-center h-screen'>

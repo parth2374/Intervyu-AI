@@ -90,7 +90,7 @@ const WelcomeContainer = () => {
   }
 
   return (
-    <div className="w-full rounded-xl
+    <div className="w-full rounded-xl overflow-hidden!
       bg-gradient-to-r from-white/60 via-slate-50 to-white/60
       dark:from-slate-800/40 dark:via-slate-900/30 dark:to-slate-800/40
       border-slate-200 dark:border-slate-700 shadow-md dark:[box-shadow:0_2px_10px_rgba(0,0,0,0.6),0_0_2px_rgba(255,255,255,0.1)] p-5 border
@@ -108,7 +108,7 @@ const WelcomeContainer = () => {
               </span>
             </div>
 
-            <p className="mt-1 text-sm text-slate-500 dark:text-slate-300 truncate">
+            <p className="mt-1 text-sm text-slate-500 dark:text-slate-300 truncate flex-wrap">
               AI-Driven Interviews · Saves Time · Hire Smarter
             </p>
           </div>

@@ -2,7 +2,7 @@
 
 import { Progress } from '@/components/ui/progress'
 import { ArrowLeft } from 'lucide-react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import FormContainer from './_components/FormContainer'
 import QuestionList from './_components/QuestionList'
@@ -13,16 +13,38 @@ import { useAuthContext } from '@/app/provider'
 const CreateInterview = () => {
 
 	const router = useRouter()
+	const searchParams = useSearchParams()
+  const prefilledRole = searchParams.get('role') || ''
+  const prefilledDesc = searchParams.get('desc') || ''
 	const [step, setStep] = useState(1)
-	const [formData, setFormData] = useState()
+	const [formData, setFormData] = useState({
+    jobPosition: '',
+    jobDescription: '',
+    duration: '',
+    type: []
+  })
 	const [interviewId, setInterviewId] = useState()
 	const { user } = useAuthContext()
 
 	useEffect(() => {
 		if (!user) {
-			router.push('/auth')
+			const currentUrl = window.location.pathname + window.location.search
+			router.push(`/auth?redirect=${encodeURIComponent(currentUrl)}`)
 		}
 	}, [user])
+
+	useEffect(() => {
+		const roleFromUrl = searchParams.get('role') || ''
+		const roleFromStorage = localStorage.getItem('jobRole') || ''
+		const descFromStorage = localStorage.getItem('jobDesc') || ''
+
+		setFormData({
+			jobPosition: roleFromUrl || roleFromStorage,
+			jobDescription: descFromStorage,
+			duration: '',
+			type: []
+		})
+	}, [])
 
 	const onHandleInputChange = (field, value) => {
 		setFormData(prev => ({
@@ -59,7 +81,7 @@ const CreateInterview = () => {
 
 			<Progress value={step * 33.33} className={`my-5`} />
 			{step == 1 ?
-				<FormContainer onHandleInputChange={onHandleInputChange} GoToNext={() => onGoToNext()} />
+				<FormContainer onHandleInputChange={onHandleInputChange} GoToNext={() => onGoToNext()} initialJobPosition={formData?.jobPosition} initialJobDescription={formData?.jobDescription} />
 				:
 				step == 2 ?
 					<QuestionList formData={formData} onCreateLink={(interview_id) => onCreateLink(interview_id)} />
